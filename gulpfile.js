@@ -61,10 +61,11 @@ gulp.task('sass', function () {
 
 gulp.task('jade', function() {
     return gulp.src('_jadefiles/*.jade')
-    .pipe(jade())
+    .pipe(jade({
+        pretty: true
+    }))
     .pipe(gulp.dest('_includes'));
 });
-
 
 
 

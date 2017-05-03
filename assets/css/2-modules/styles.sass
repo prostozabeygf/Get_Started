@@ -1,0 +1,144 @@
+header.c-head
+	height: 45px
+	background: transparent
+	box-shadow: 0 3px 5px rgba(0,0,0,0.3)
+	position: fixed
+	width: 100%
+	.sidebar-toogle
+		position: absolute
+		left: 15px
+		color: $white
+		font-size: 18px
+		top: 14px
+		line-height: 1
+		cursor: pointer
+	.c-head_title
+		text-align: center
+		line-height: 45px
+		text-transform: uppercase
+		color: $white
+		font-size: 14px
+
+/* additional options button */
+.additional_btn
+	background-color: transparent
+	border: none
+	color: $blue_clr
+	margin: 35px 0 35px
+	position: relative
+	text-transform: uppercase
+	font-weight: light
+	font-size: 11px
+	line-height: 1
+	+transition(all 300ms ease-in-out)
+	position: relative
+	&:focus, &:hover
+		color: $blue_clr
+	&:after
+		content: '\f107'
+  font: normal normal normal 24px/1 FontAwesome
+  display: block
+  line-height: 1
+  +transition
+  position: absolute
+  width: 20px
+  height: 20px
+  left: 50%
+  top: 100%
+  margin-left: -10px
+ &.opened
+ 	margin: 35px 0 25px 
+	&.opened:after
+		top: inherit
+		bottom: 100%
+		transform: rotate(180deg) 
+
+/* search form #search_form */
+.c-search_form
+	text-align: center
+
+	&__switch
+		width: 25px
+		height: 25px
+		border: none
+		border-radius: 50%
+		position: absolute
+		top: 38%
+		left: 50%
+		margin-left: -12.5px
+		background-color: $blue_clr
+		background:
+			repeat: no-repeat
+			position: center
+			size: 12px 13px
+			image: url(../img/arrows-exchange.png)
+
+	&__additional
+		margin-bottom: 25px
+		// display: none
+
+	&__selects
+		display: flex
+		justify-content: space-between
+		margin-bottom: 20px
+		select 
+			border-radius: 20px
+			height: 30px
+			min-width: 50px
+			background-color: transparent
+			border: 2px solid $muted_clr
+			padding: 0 10px
+
+	&__baggage
+		margin-bottom: 20px
+		display: flex
+		justify-content: space-between
+		button
+			display: inline-block
+			width: 30%
+			height: 30px
+
+	/* search form fields */
+	&__fields
+		position: relative
+
+	&__field
+
+		input
+			background: transparent
+			border: 2px solid $muted_clr
+			display: block
+			width: 100%
+			height: 40px
+			margin-bottom: 20px
+			padding-left: 20px
+			font-size: 18px
+			color: $white
+			border-radius: 20px
+			outline: none
+			+transition
+
+			&:focus
+				border: 2px solid $white
+
+		&:last-child input
+			margin-bottom: 0
+
+	/* search form buttons */
+	&__buttons
+		display: flex
+
+	&__button
+		margin-right: 15px
+
+		&:last-child
+			margin-right: 0
+
+	&__submit
+		width: 150px
+		border: none
+		text-transform: uppercase
+		height: 50px
+		font-size: 19px
+		color: $white
+		background: linear-gradient(to bottom, #6609bc, #284796)

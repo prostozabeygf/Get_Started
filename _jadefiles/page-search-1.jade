@@ -1,0 +1,73 @@
+.c-content_center
+
+	section.c-search
+		.c-container
+
+			.c-tickets_logo: img(src="assets/img/logo.png", alt="China tickets logo")
+			
+			.c-search_form
+				form
+					.c-search_form__fields
+						
+						.c-search_form__field
+							input(type="text" placeholder="Киев")
+						
+						.c-search_form__field
+							input(type="text" placeholder="Гуанджоу")
+						
+						button(type="button").c-search_form__switch
+					
+					.c-search_form__buttons
+						button(type="button").c-search_form__button.c-btn Туда
+						button(type="button").c-search_form__button.c-btn Обратно
+					
+					// additional options button
+					a(href="#").additional_btn Дополнительные параметры
+					
+					// additional options start
+					.c-search_form__additional
+						
+						.c-search_form__selects
+							
+							.c-search_form__select
+								label: i.fa.fa-user
+								select#c-n--of-p
+									option 1
+									option 2
+									option 3
+							
+							.c-search_form__select
+								label: i.fa.fa-user
+								select#c-n--of-c
+									option Бизнес
+									option Обычный
+									option VIP
+						
+						.c-search_form__baggage
+							button.c-btn(type="button")
+								i.fa.fa-case
+								span 1
+							button.c-btn(type="button")
+								i.fa.fa-case
+								span 2
+							button.c-btn(type="button")
+								i.fa.fa-case
+								span 3
+						
+						.c-search_form__flights
+						
+							.c-search_form__flight
+								input(type="radio")
+								span Только прямой рейс
+							
+							.c-search_form__flight
+								input(type="radio")
+								span Визовый выезд
+						
+						.c-search_form__comment
+							input(type="textare")
+
+							
+					// additional options end
+					
+					input(type="submit" value="Поиск").c-search_form__submit.c-btn
